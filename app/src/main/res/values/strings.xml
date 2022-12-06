@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OzU Clubs</string>
+    <string name="club_a">OutDoor Sports Club</string>
+    <string name="club_b">Fine Arts Club</string>
+    <string name="club_c">Cinema Club</string>
+    <string name="club_d">Music Club</string>
+    <string name="club_e">OzU Business Club</string>
+    <string name="club_f">OzU Cuisine</string>
+    <string name="club_g">OzU Dance</string>
+    <string name="club_h">OzU Game HUB</string>
+    <string name="club_i">OzU IEEE</string>
+    <string name="club_j">OzU Maker</string>
+    <string name="club_k">OzU Oda Theater</string>
+
+</resources>
