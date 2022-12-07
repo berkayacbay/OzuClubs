@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
@@ -28,7 +30,10 @@ class EventsFragment: Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentEventsBinding>(inflater,
             R.layout.fragment_events,container,false)
-
+        binding.buttonMylist.setOnClickListener {
+                view: View ->
+            view.findNavController().navigate(R.id.action_eventsFragment_to_myListFragment)
+        }
 
         return binding.root
     }
@@ -43,6 +48,7 @@ class EventsFragment: Fragment() {
         adapter= EventAdapter(eventsArrayList)
         rv.adapter=adapter
     }
+
 
     private fun dataInitialize(){
          eventsArrayList= arrayListOf<Event>()
@@ -78,5 +84,7 @@ class EventsFragment: Fragment() {
         }
 
     }
+
+
 
 }

@@ -41,6 +41,7 @@ class ClubsFragment: Fragment() {
 
 
 
+
     private fun dataInitialize(){
         clubsArrayList= arrayListOf<Club>()
         imageId= arrayOf(
