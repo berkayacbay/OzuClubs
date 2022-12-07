@@ -41,6 +41,10 @@ class EventsFragment : Fragment() {
             view.findNavController().navigate(R.id.action_eventsFragment_to_myListFragment)
         }
 
+        binding.backButton.setOnClickListener { view:View ->
+            view.findNavController().navigate(R.id.action_eventsFragment_to_clubsFragment)
+        }
+
         return binding.root
     }
 

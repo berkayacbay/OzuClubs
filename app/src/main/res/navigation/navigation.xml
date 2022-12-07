@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_eventsFragment_to_myListFragment"
             app:destination="@id/myListFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_clubsFragment"
+            app:destination="@id/ClubsFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
