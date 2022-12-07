@@ -14,16 +14,22 @@ import com.example.ozuclubs.adapter.ClubAdapter
 import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
-class ClubsFragment: Fragment() {
-    private  lateinit var rv: RecyclerView
-    private  lateinit var clubsArrayList:ArrayList<Club>
+class ClubsFragment : Fragment() {
+    private lateinit var rv: RecyclerView
+    private lateinit var clubsArrayList: ArrayList<Club>
 
     lateinit var imageId: Array<Int>
     lateinit var clubName: Array<String>
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val binding = DataBindingUtil.inflate<FragmentClubsBinding>(inflater,
-            R.layout.fragment_clubs,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = DataBindingUtil.inflate<FragmentClubsBinding>(
+            inflater,
+            R.layout.fragment_clubs, container, false
+        )
         binding.buttonEvent.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
         }
@@ -33,18 +39,16 @@ class ClubsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
-        rv=view.findViewById(R.id.recycler_view1)
-        rv.layoutManager=LinearLayoutManager(context)
+        rv = view.findViewById(R.id.recycler_view1)
+        rv.layoutManager = LinearLayoutManager(context)
         rv.setHasFixedSize(true)
-        rv.adapter=ClubAdapter(clubsArrayList)
+        rv.adapter = ClubAdapter(clubsArrayList)
     }
 
 
-
-
-    private fun dataInitialize(){
-        clubsArrayList= arrayListOf<Club>()
-        imageId= arrayOf(
+    private fun dataInitialize() {
+        clubsArrayList = arrayListOf<Club>()
+        imageId = arrayOf(
             R.drawable.image_a,
             R.drawable.image_b,
             R.drawable.image_c,
@@ -57,7 +61,7 @@ class ClubsFragment: Fragment() {
             R.drawable.image_j,
             R.drawable.image_k,
         )
-        clubName= arrayOf(
+        clubName = arrayOf(
             getString(R.string.club_a),
             getString(R.string.club_b),
             getString(R.string.club_c),
@@ -70,13 +74,12 @@ class ClubsFragment: Fragment() {
             getString(R.string.club_j),
             getString(R.string.club_k),
         )
-        for(i in imageId.indices){
-            val club=Club(clubName[i],imageId[i])
+        for (i in imageId.indices) {
+            val club = Club(clubName[i], imageId[i])
             clubsArrayList.add(club)
         }
 
     }
-
 
 
 }

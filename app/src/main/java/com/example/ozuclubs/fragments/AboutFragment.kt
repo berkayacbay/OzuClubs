@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.ozuclubs.R
 
 
-class AboutFragment: Fragment() {
+class AboutFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -18,41 +18,46 @@ import com.example.ozuclubs.data.Event
 import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.FragmentEventsBinding
 
-class EventsFragment: Fragment() {
-    private  lateinit var adapter: EventAdapter
-    private  lateinit var rv: RecyclerView
-    private  lateinit var eventsArrayList:ArrayList<Event>
+class EventsFragment : Fragment() {
+    private lateinit var adapter: EventAdapter
+    private lateinit var rv: RecyclerView
+    private lateinit var eventsArrayList: ArrayList<Event>
 
     lateinit var imageId: Array<Int>
     lateinit var eventHeader: Array<String>
     lateinit var eventBriefDesc: Array<String>
     lateinit var checkbox: Array<MyList>
-    private lateinit var cb : CheckBox
-    private lateinit var bind : FragmentEventsBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        val binding = DataBindingUtil.inflate<FragmentEventsBinding>(inflater,
-            R.layout.fragment_events,container,false)
-        binding.buttonMylist.setOnClickListener {
-                view: View ->
+    private lateinit var cb: CheckBox
+    private lateinit var bind: FragmentEventsBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = DataBindingUtil.inflate<FragmentEventsBinding>(
+            inflater,
+            R.layout.fragment_events, container, false
+        )
+        binding.buttonMylist.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_eventsFragment_to_myListFragment)
         }
 
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
         val layoutManager = LinearLayoutManager(context)
-         rv=view.findViewById(R.id.recycler_view2)
-        rv.layoutManager=layoutManager
+        rv = view.findViewById(R.id.recycler_view2)
+        rv.layoutManager = layoutManager
         rv.setHasFixedSize(true)
-        adapter= EventAdapter(eventsArrayList)
-        rv.adapter=adapter
+        adapter = EventAdapter(eventsArrayList)
+        rv.adapter = adapter
     }
-    private fun dataInitialize(){
-         eventsArrayList= arrayListOf<Event>()
-         imageId= arrayOf(
+
+    private fun dataInitialize() {
+        eventsArrayList = arrayListOf<Event>()
+        imageId = arrayOf(
             R.drawable.event_a,
             R.drawable.event_b,
             R.drawable.event_c,
@@ -60,7 +65,7 @@ class EventsFragment: Fragment() {
             R.drawable.event_e,
             R.drawable.event_f,
         )
-        eventHeader= arrayOf(
+        eventHeader = arrayOf(
             getString(R.string.header_a),
             getString(R.string.header_b),
             getString(R.string.header_c),
@@ -68,8 +73,8 @@ class EventsFragment: Fragment() {
             getString(R.string.header_e),
             getString(R.string.header_f),
 
-        )
-        eventBriefDesc= arrayOf(
+            )
+        eventBriefDesc = arrayOf(
             getString(R.string.description_a),
             getString(R.string.description_b),
             getString(R.string.description_c),
@@ -77,14 +82,13 @@ class EventsFragment: Fragment() {
             getString(R.string.description_e),
             getString(R.string.description_f),
 
-        )
-        for(i in imageId.indices){
-            val event= Event(eventHeader[i],eventBriefDesc[i],imageId[i])
+            )
+        for (i in imageId.indices) {
+            val event = Event(eventHeader[i], eventBriefDesc[i], imageId[i])
             eventsArrayList.add(event)
         }
 
     }
-
 
 
 }
