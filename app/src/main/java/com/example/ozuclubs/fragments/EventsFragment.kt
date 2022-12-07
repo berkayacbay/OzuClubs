@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.ozuclubs.R
+import com.example.ozuclubs.databinding.FragmentEventsBinding
 
 class EventsFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

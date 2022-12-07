@@ -1,20 +1,20 @@
 package com.example.ozuclubs.fragments
 
 import android.os.Bundle
-import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 import com.example.ozuclubs.adapter.MyAdapter
 import com.example.ozuclubs.data.Club
-import com.example.ozuclubs.databinding.FragmentRecyclerviewBinding
+import com.example.ozuclubs.databinding.FragmentClubsBinding
 
-class RecyclerViewFragment: Fragment() {
+class ClubsFragment: Fragment() {
     private  lateinit var adapter:MyAdapter
     private  lateinit var rv: RecyclerView
     private  lateinit var clubsArrayList:ArrayList<Club>
@@ -23,8 +23,11 @@ class RecyclerViewFragment: Fragment() {
     lateinit var clubName: Array<String>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val binding = DataBindingUtil.inflate<FragmentRecyclerviewBinding>(inflater,
-            R.layout.fragment_recyclerview,container,false)
+        val binding = DataBindingUtil.inflate<FragmentClubsBinding>(inflater,
+            R.layout.fragment_clubs,container,false)
+        binding.buttonEvent.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
+        }
         return binding.root
     }
 
@@ -32,7 +35,7 @@ class RecyclerViewFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
         val layoutManager =LinearLayoutManager(context)
-        rv=view.findViewById(R.id.recycler_view)
+        rv=view.findViewById(R.id.recycler_view1)
         rv.layoutManager=layoutManager
         rv.setHasFixedSize(true)
         adapter=MyAdapter(clubsArrayList)

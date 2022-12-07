@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ClubsFragment">
+
+    <fragment
+        android:id="@+id/ClubsFragment"
+        android:name="com.example.ozuclubs.fragments.ClubsFragment"
+        android:label="ClubsFragment"
+        tools:layout="@layout/fragment_clubs">
+        <action
+            android:id="@+id/action_clubsFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.ozuclubs.fragments.EventsFragment"
+        android:label="EventsFragment"
+        tools:layout="@layout/fragment_events"/>
+</navigation>
