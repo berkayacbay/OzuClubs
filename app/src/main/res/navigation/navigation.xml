@@ -18,5 +18,19 @@
         android:id="@+id/eventsFragment"
         android:name="com.example.ozuclubs.fragments.EventsFragment"
         android:label="EventsFragment"
-        tools:layout="@layout/fragment_events"/>
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_eventsFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.ozuclubs.fragments.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.example.ozuclubs.fragments.MyListFragment"
+        android:label="MyListFragment"
+        tools:layout="@layout/fragment_mylist"/>
 </navigation>

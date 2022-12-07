@@ -15,7 +15,6 @@ import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
 class ClubsFragment: Fragment() {
-    private  lateinit var adapter:ClubAdapter
     private  lateinit var rv: RecyclerView
     private  lateinit var clubsArrayList:ArrayList<Club>
 
@@ -34,12 +33,10 @@ class ClubsFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
-        val layoutManager =LinearLayoutManager(context)
         rv=view.findViewById(R.id.recycler_view1)
-        rv.layoutManager=layoutManager
+        rv.layoutManager=LinearLayoutManager(context)
         rv.setHasFixedSize(true)
-        adapter=ClubAdapter(clubsArrayList)
-        rv.adapter=adapter
+        rv.adapter=ClubAdapter(clubsArrayList)
     }
 
 
