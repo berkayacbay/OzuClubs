@@ -42,8 +42,8 @@ class EventsFragment: Fragment() {
     }
 
     private fun dataInitialize(){
-        var eventsArrayList= arrayListOf<Event>()
-        var imageId= arrayOf(
+         eventsArrayList= arrayListOf<Event>()
+         imageId= arrayOf(
             R.drawable.image_a,
             R.drawable.image_b,
             R.drawable.image_c,
@@ -51,13 +51,13 @@ class EventsFragment: Fragment() {
             R.drawable.image_e,
             R.drawable.image_f,
         )
-        var eventName= arrayOf(
+        eventName= arrayOf(
             getString(R.string.description_a),
             getString(R.string.description_b),
             getString(R.string.description_c),
             getString(R.string.description_d),
             getString(R.string.description_e),
-            getString(R.string.description_f)
+            getString(R.string.description_f),
         )
         for(i in imageId.indices){
             val event= Event(eventName[i],imageId[i])
