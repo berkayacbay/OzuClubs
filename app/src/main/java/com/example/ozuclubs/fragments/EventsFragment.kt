@@ -15,6 +15,7 @@ import com.example.ozuclubs.adapter.ClubAdapter
 import com.example.ozuclubs.adapter.EventAdapter
 import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.data.Event
+import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.FragmentEventsBinding
 
 class EventsFragment: Fragment() {
@@ -25,7 +26,9 @@ class EventsFragment: Fragment() {
     lateinit var imageId: Array<Int>
     lateinit var eventHeader: Array<String>
     lateinit var eventBriefDesc: Array<String>
-
+    lateinit var checkbox: Array<MyList>
+    private lateinit var cb : CheckBox
+    private lateinit var bind : FragmentEventsBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentEventsBinding>(inflater,
@@ -37,7 +40,6 @@ class EventsFragment: Fragment() {
 
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
@@ -48,8 +50,6 @@ class EventsFragment: Fragment() {
         adapter= EventAdapter(eventsArrayList)
         rv.adapter=adapter
     }
-
-
     private fun dataInitialize(){
          eventsArrayList= arrayListOf<Event>()
          imageId= arrayOf(
