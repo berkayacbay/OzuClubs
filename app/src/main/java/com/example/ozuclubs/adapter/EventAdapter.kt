@@ -7,14 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.data.Event
 
 class EventAdapter(private val eventList:ArrayList<Event>):RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val eventImage: ImageView =itemView.findViewById(R.id.event_image)
-        val eventName: TextView =itemView.findViewById(R.id.event_name)
+        val eventHeader: TextView =itemView.findViewById(R.id.event_header)
+        val eventBriefDesc: TextView =itemView.findViewById(R.id.text_briefdesc)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -25,7 +25,8 @@ class EventAdapter(private val eventList:ArrayList<Event>):RecyclerView.Adapter<
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem =eventList[position]
         holder.eventImage.setImageResource(currentItem.eventImage)
-        holder.eventName.text=currentItem.eventName
+        holder.eventHeader.text=currentItem.eventHeader
+        holder.eventBriefDesc.text=currentItem.eventBriefDesc
 
     }
 

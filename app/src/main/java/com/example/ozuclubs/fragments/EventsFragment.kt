@@ -21,7 +21,9 @@ class EventsFragment: Fragment() {
     private  lateinit var eventsArrayList:ArrayList<Event>
 
     lateinit var imageId: Array<Int>
-    lateinit var eventName: Array<String>
+    lateinit var eventHeader: Array<String>
+    lateinit var eventBriefDesc: Array<String>
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentEventsBinding>(inflater,
@@ -52,16 +54,26 @@ class EventsFragment: Fragment() {
             R.drawable.event_e,
             R.drawable.event_f,
         )
-        eventName= arrayOf(
+        eventHeader= arrayOf(
+            getString(R.string.header_a),
+            getString(R.string.header_b),
+            getString(R.string.header_c),
+            getString(R.string.header_d),
+            getString(R.string.header_e),
+            getString(R.string.header_f),
+
+        )
+        eventBriefDesc= arrayOf(
             getString(R.string.description_a),
             getString(R.string.description_b),
             getString(R.string.description_c),
             getString(R.string.description_d),
             getString(R.string.description_e),
             getString(R.string.description_f),
+
         )
         for(i in imageId.indices){
-            val event= Event(eventName[i],imageId[i])
+            val event= Event(eventHeader[i],eventBriefDesc[i],imageId[i])
             eventsArrayList.add(event)
         }
 

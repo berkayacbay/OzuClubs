@@ -19,11 +19,11 @@
     <string name="header_e">Alumni Summit </string>
     <string name="header_f">Wine Tasting</string>
 
-    <string name="description_a">Career Talks</string>
-    <string name="description_b">The Stage Is Yours</string>
-    <string name="description_c">Ramporovo Ski Trip</string>
-    <string name="description_d">GameHUB Introduction Meeting</string>
-    <string name="description_e">Alumni Summit </string>
-    <string name="description_f">Wine Tasting</string>
+    <string name="description_a">Brief Description</string>
+    <string name="description_b">Brief Description</string>
+    <string name="description_c">Brief Description</string>
+    <string name="description_d">Brief Description</string>
+    <string name="description_e">Brief Description</string>
+    <string name="description_f">Brief Description</string>
 
 </resources>
