@@ -24,8 +24,9 @@ class EventsFragment: Fragment() {
     lateinit var eventName: Array<String>
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val binding: FragmentEventsBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_events, container, false)
+        val binding = DataBindingUtil.inflate<FragmentEventsBinding>(inflater,
+            R.layout.fragment_events,container,false)
+
 
         return binding.root
     }
@@ -44,12 +45,12 @@ class EventsFragment: Fragment() {
     private fun dataInitialize(){
          eventsArrayList= arrayListOf<Event>()
          imageId= arrayOf(
-            R.drawable.image_a,
-            R.drawable.image_b,
-            R.drawable.image_c,
-            R.drawable.image_d,
-            R.drawable.image_e,
-            R.drawable.image_f,
+            R.drawable.event_a,
+            R.drawable.event_b,
+            R.drawable.event_c,
+            R.drawable.event_d,
+            R.drawable.event_e,
+            R.drawable.event_f,
         )
         eventName= arrayOf(
             getString(R.string.description_a),
