@@ -12,4 +12,18 @@
     <string name="club_j">OzU Maker</string>
     <string name="club_k">OzU Oda Theater</string>
 
+    <string name="header_a">Career Talks</string>
+    <string name="header_b">The Stage Is Yours</string>
+    <string name="header_c">Ramporovo Ski Trip</string>
+    <string name="header_d">GameHUB Introduction Meeting</string>
+    <string name="header_e">Alumni Summit </string>
+    <string name="header_f">Wine Tasting</string>
+
+    <string name="description_a">Career Talks</string>
+    <string name="description_b">The Stage Is Yours</string>
+    <string name="description_c">Ramporovo Ski Trip</string>
+    <string name="description_d">GameHUB Introduction Meeting</string>
+    <string name="description_e">Alumni Summit </string>
+    <string name="description_f">Wine Tasting</string>
+
 </resources>
