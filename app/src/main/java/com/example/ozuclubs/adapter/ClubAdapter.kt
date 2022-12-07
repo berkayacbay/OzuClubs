@@ -8,9 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 import com.example.ozuclubs.data.Club
-import com.google.android.material.imageview.ShapeableImageView
 
-class MyAdapter(private val clubsList:ArrayList<Club>):RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class ClubAdapter(private val clubsList:ArrayList<Club>):RecyclerView.Adapter<ClubAdapter.MyViewHolder>() {
 
 class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
     val clubImage: ImageView =itemView.findViewById(R.id.club_image)
@@ -18,7 +17,7 @@ class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_club,parent,false)
         return MyViewHolder(itemView)
     }
 

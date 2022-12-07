@@ -10,12 +10,12 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.adapter.MyAdapter
+import com.example.ozuclubs.adapter.ClubAdapter
 import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
 class ClubsFragment: Fragment() {
-    private  lateinit var adapter:MyAdapter
+    private  lateinit var adapter:ClubAdapter
     private  lateinit var rv: RecyclerView
     private  lateinit var clubsArrayList:ArrayList<Club>
 
@@ -38,7 +38,7 @@ class ClubsFragment: Fragment() {
         rv=view.findViewById(R.id.recycler_view1)
         rv.layoutManager=layoutManager
         rv.setHasFixedSize(true)
-        adapter=MyAdapter(clubsArrayList)
+        adapter=ClubAdapter(clubsArrayList)
         rv.adapter=adapter
     }
 
