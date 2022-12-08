@@ -15,6 +15,7 @@ class ClubAdapter(private val clubsList: ArrayList<Club>) :
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val clubImage: ImageView = itemView.findViewById(R.id.club_image)
         val clubName: TextView = itemView.findViewById(R.id.club_name)
+       
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

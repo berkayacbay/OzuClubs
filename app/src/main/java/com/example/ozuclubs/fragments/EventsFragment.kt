@@ -19,24 +19,35 @@ import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.FragmentEventsBinding
 
 class EventsFragment : Fragment() {
-    private lateinit var adapter: EventAdapter
-    private lateinit var rv: RecyclerView
+    private lateinit var adapter1: EventAdapter
+
     private lateinit var eventsArrayList: ArrayList<Event>
 
     lateinit var imageId: Array<Int>
     lateinit var eventHeader: Array<String>
     lateinit var eventBriefDesc: Array<String>
+
     lateinit var checkbox: Array<MyList>
     private lateinit var cb: CheckBox
-    private lateinit var bind: FragmentEventsBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val binding = DataBindingUtil.inflate<FragmentEventsBinding>(
             inflater,
             R.layout.fragment_events, container, false
         )
+
+        dataInitialize()
+        adapter1 = EventAdapter(eventsArrayList)
+        binding.recyclerView2.apply {
+            layoutManager= LinearLayoutManager(context)
+            hasFixedSize()
+            this.adapter=adapter1
+
+
+        }
+
         binding.buttonMylist.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_eventsFragment_to_myListFragment)
         }
@@ -48,16 +59,7 @@ class EventsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
-        val layoutManager = LinearLayoutManager(context)
-        rv = view.findViewById(R.id.recycler_view2)
-        rv.layoutManager = layoutManager
-        rv.setHasFixedSize(true)
-        adapter = EventAdapter(eventsArrayList)
-        rv.adapter = adapter
-    }
+
 
     private fun dataInitialize() {
         eventsArrayList = arrayListOf<Event>()

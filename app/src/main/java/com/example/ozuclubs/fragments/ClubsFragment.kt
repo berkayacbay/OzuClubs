@@ -11,25 +11,30 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 import com.example.ozuclubs.adapter.ClubAdapter
+import com.example.ozuclubs.adapter.EventAdapter
 import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
 class ClubsFragment : Fragment() {
-    private lateinit var rv: RecyclerView
+
     private lateinit var clubsArrayList: ArrayList<Club>
+    private lateinit var adapter1: ClubAdapter
 
     lateinit var imageId: Array<Int>
     lateinit var clubName: Array<String>
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val binding = DataBindingUtil.inflate<FragmentClubsBinding>(
-            inflater,
-            R.layout.fragment_clubs, container, false
-        )
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val binding = DataBindingUtil.inflate<FragmentClubsBinding>(inflater, R.layout.fragment_clubs, container, false)
+
+        dataInitialize()
+        adapter1 = ClubAdapter(clubsArrayList)
+        binding.recyclerView1.apply {
+            layoutManager= LinearLayoutManager(context)
+            hasFixedSize()
+            this.adapter=adapter1
+
+
+        }
         binding.buttonEvent.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
         }
@@ -40,14 +45,6 @@ class ClubsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
-        rv = view.findViewById(R.id.recycler_view1)
-        rv.layoutManager = LinearLayoutManager(context)
-        rv.setHasFixedSize(true)
-        rv.adapter = ClubAdapter(clubsArrayList)
-    }
 
 
     private fun dataInitialize() {

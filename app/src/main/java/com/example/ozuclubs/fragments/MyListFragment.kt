@@ -12,18 +12,9 @@ import com.example.ozuclubs.databinding.FragmentMylistBinding
 
 class MyListFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentMylistBinding>(
-            inflater,
-            R.layout.fragment_mylist,
-            container,
-            false
-        )
+        val binding = DataBindingUtil.inflate<FragmentMylistBinding>(inflater, R.layout.fragment_mylist, container, false)
 
         binding.backButton2
             .setOnClickListener { view: View ->

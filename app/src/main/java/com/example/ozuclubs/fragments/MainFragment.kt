@@ -12,18 +12,9 @@ import com.example.ozuclubs.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentMainBinding>(
-            inflater,
-            R.layout.fragment_main,
-            container,
-            false
-        )
+        val binding = DataBindingUtil.inflate<FragmentMainBinding>(inflater, R.layout.fragment_main, container, false)
 
 
         binding.buttonLogin.setOnClickListener { view: View ->
