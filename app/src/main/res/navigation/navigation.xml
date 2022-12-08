@@ -3,7 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/ClubsFragment">
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.ozuclubs.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_ClubsFragment"
+            app:destination="@id/ClubsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/ClubsFragment"
@@ -13,6 +29,9 @@
         <action
             android:id="@+id/action_clubsFragment_to_eventsFragment"
             app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_ClubsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventsFragment"
@@ -26,14 +45,15 @@
             android:id="@+id/action_eventsFragment_to_clubsFragment"
             app:destination="@id/ClubsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.example.ozuclubs.fragments.AboutFragment"
-        android:label="AboutFragment"
-        tools:layout="@layout/fragment_about"/>
+
     <fragment
         android:id="@+id/myListFragment"
         android:name="com.example.ozuclubs.fragments.MyListFragment"
         android:label="MyListFragment"
-        tools:layout="@layout/fragment_mylist"/>
+        tools:layout="@layout/fragment_mylist">
+        <action
+            android:id="@+id/action_myListFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+    </fragment>
+
 </navigation>

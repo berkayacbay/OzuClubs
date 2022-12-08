@@ -33,6 +33,10 @@ class ClubsFragment : Fragment() {
         binding.buttonEvent.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
         }
+
+        binding.buttonBack2.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_ClubsFragment_to_mainFragment)
+        }
         return binding.root
     }
 
