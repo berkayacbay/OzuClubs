@@ -25,22 +25,11 @@ class MainFragment : Fragment() {
             false
         )
 
-        binding.buttonClubs.setOnClickListener { view: View ->
+
+        binding.buttonLogin.setOnClickListener { view: View ->
 
             view.findNavController()
                 .navigate(R.id.action_mainFragment_to_ClubsFragment)
-        }
-
-        binding.buttonMylist2.setOnClickListener { view: View ->
-
-            view.findNavController()
-                .navigate(R.id.action_mainFragment_to_myListFragment)
-        }
-
-        binding.buttonEvents.setOnClickListener { view: View ->
-
-            view.findNavController()
-                .navigate(R.id.action_mainFragment_to_eventsFragment)
         }
         return binding.root
     }

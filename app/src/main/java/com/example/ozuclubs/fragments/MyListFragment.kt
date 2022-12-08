@@ -25,7 +25,8 @@ class MyListFragment : Fragment() {
             false
         )
 
-        binding.backButton3.setOnClickListener { view: View ->
+        binding.backButton2
+            .setOnClickListener { view: View ->
 
             view.findNavController()
                 .navigate(R.id.action_myListFragment_to_eventsFragment)

@@ -19,12 +19,13 @@
     <string name="header_e">Alumni Summit </string>
     <string name="header_f">Wine Tasting</string>
 
-    <string name="description_a">Brief Description</string>
-    <string name="description_b">Brief Description</string>
-    <string name="description_c">Brief Description</string>
-    <string name="description_d">Brief Description</string>
-    <string name="description_e">Brief Description</string>
-    <string name="description_f">Brief Description</string>
+    <string name="description_a">Held on December 5 at 13.30 by the IEEE club.</string>
+    <string name="description_b">Held on December 9 at 18.30 by the Music club.</string>
+    <string name="description_c">Held on December 6 at 08.00 by the Outdoor Sports club.</string>
+    <string name="description_d">Held on December 5 at 19.15 by the GameHub Club.</string>
+    <string name="description_e">Held on December 8 at 14.00 by the Business Club.</string>
+    <string name="description_f">Held on December 7 at 16.40 by the Cuisine club.</string>
+
     <string name="enter_your_e_mail_address">Enter your e-mail address</string>
     <string name="events">Events</string>
     <string name="tap_to_see_this_week_s_club_events">Tap to see this week\'s club events</string>
