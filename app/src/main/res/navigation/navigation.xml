@@ -14,11 +14,8 @@
             android:id="@+id/action_mainFragment_to_ClubsFragment"
             app:destination="@id/ClubsFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_eventsFragment"
-            app:destination="@id/eventsFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_myListFragment"
-            app:destination="@id/myListFragment" />
+            android:id="@+id/action_mainFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
 
     <fragment
@@ -54,6 +51,14 @@
         <action
             android:id="@+id/action_myListFragment_to_eventsFragment"
             app:destination="@id/eventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.ozuclubs.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
 </navigation>

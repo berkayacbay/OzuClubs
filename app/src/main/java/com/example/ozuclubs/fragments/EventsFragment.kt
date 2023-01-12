@@ -40,6 +40,7 @@ class EventsFragment : Fragment() {
 
         dataInitialize()
         adapter1 = EventAdapter(eventsArrayList)
+
         binding.recyclerView2.apply {
             layoutManager= LinearLayoutManager(context)
             hasFixedSize()
