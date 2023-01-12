@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -8,28 +9,63 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="72dp">
 
-        <ImageView
-            android:id="@+id/club_image"
-            android:layout_width="72dp"
-            android:layout_height="53dp"
+        <!--        <ImageView-->
+        <!--            android:id="@+id/club_image"-->
+        <!--            android:layout_width="72dp"-->
+        <!--            android:layout_height="53dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:srcCompat="@drawable/image_a" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/club_name"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:text="Club Name"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.096"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/club_image"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="355dp"
+            android:layout_height="74dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardCornerRadius="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/image_a" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/club_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Club Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
-            app:layout_constraintStart_toEndOf="@+id/club_image"
-            app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="367dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/club_image"
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/image_a" />
+
+                <TextView
+                    android:id="@+id/club_name"
+                    android:layout_width="179dp"
+                    android:layout_height="33dp"
+                    android:text="TextView"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

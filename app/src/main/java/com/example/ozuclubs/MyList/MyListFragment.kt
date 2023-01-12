@@ -1,4 +1,4 @@
-package com.example.ozuclubs.fragments
+package com.example.ozuclubs.MyList
 
 import android.os.Bundle
 import android.view.LayoutInflater

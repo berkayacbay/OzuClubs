@@ -1,4 +1,4 @@
-package com.example.ozuclubs.fragments
+package com.example.ozuclubs.Clubs
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.adapter.ClubAdapter
-import com.example.ozuclubs.adapter.EventAdapter
 import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
@@ -39,9 +36,9 @@ class ClubsFragment : Fragment() {
             view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
         }
 
-        binding.buttonBack2.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_ClubsFragment_to_mainFragment)
-        }
+//        binding.buttonBack2.setOnClickListener { view: View ->
+//            view.findNavController().navigate(R.id.action_ClubsFragment_to_mainFragment)
+//        }
         return binding.root
     }
 

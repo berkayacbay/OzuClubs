@@ -49,8 +49,8 @@ class MainFragment : Fragment() {
 //
 //        }
         binding.buttonLogin.setOnClickListener { view: View ->
-            var email = binding.editTextTextEmailAddress.text.toString()
-            var password = binding.editTextPassword.text.toString()
+            var email = binding.email.text.toString()
+            var password = binding.passwordEditText.text.toString()
 
 
          if (TextUtils.isEmpty(email)) {

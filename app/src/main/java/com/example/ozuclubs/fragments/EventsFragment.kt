@@ -9,11 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.adapter.ClubAdapter
 import com.example.ozuclubs.adapter.EventAdapter
-import com.example.ozuclubs.data.Club
 import com.example.ozuclubs.data.Event
 import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.FragmentEventsBinding

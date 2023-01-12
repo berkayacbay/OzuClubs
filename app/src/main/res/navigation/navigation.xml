@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/ClubsFragment"
-        android:name="com.example.ozuclubs.fragments.ClubsFragment"
+        android:name="com.example.ozuclubs.Clubs.ClubsFragment"
         android:label="ClubsFragment"
         tools:layout="@layout/fragment_clubs">
         <action
@@ -45,7 +45,7 @@
 
     <fragment
         android:id="@+id/myListFragment"
-        android:name="com.example.ozuclubs.fragments.MyListFragment"
+        android:name="com.example.ozuclubs.MyList.MyListFragment"
         android:label="MyListFragment"
         tools:layout="@layout/fragment_mylist">
         <action

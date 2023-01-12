@@ -1,4 +1,4 @@
-package com.example.ozuclubs.adapter
+package com.example.ozuclubs.Clubs
 
 import android.view.LayoutInflater
 import android.view.View
