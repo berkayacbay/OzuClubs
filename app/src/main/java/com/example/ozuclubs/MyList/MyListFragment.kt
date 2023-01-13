@@ -16,12 +16,12 @@ class MyListFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<FragmentMylistBinding>(inflater, R.layout.fragment_mylist, container, false)
 
-        binding.backButton2
-            .setOnClickListener { view: View ->
 
-            view.findNavController()
-                .navigate(R.id.action_myListFragment_to_eventsFragment)
+        binding.floatingButtonAdd.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_myListFragment_to_addNoteFragment)
+
         }
+
         return binding.root
     }
 }

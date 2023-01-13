@@ -51,14 +51,27 @@
         <action
             android:id="@+id/action_myListFragment_to_eventsFragment"
             app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_myListFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.ozuclubs.fragments.RegisterFragment"
-        android:label="RegisterFragment" >
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.ozuclubs.MyList.addNoteFragment"
+        android:label="addNoteFragment"
+        tools:layout="@layout/fragment_add_note">
+        <action
+            android:id="@+id/action_addNoteFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
     </fragment>
 
 </navigation>

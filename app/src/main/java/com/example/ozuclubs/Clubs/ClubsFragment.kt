@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ozuclubs.R
@@ -14,11 +15,15 @@ import com.example.ozuclubs.databinding.FragmentClubsBinding
 
 class ClubsFragment : Fragment() {
 
+
+
     private lateinit var clubsArrayList: ArrayList<Club>
     private lateinit var adapter1: ClubAdapter
 
     lateinit var imageId: Array<Int>
     lateinit var clubName: Array<String>
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentClubsBinding>(inflater, R.layout.fragment_clubs, container, false)
