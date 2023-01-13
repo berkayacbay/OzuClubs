@@ -30,7 +30,7 @@ private lateinit var  mNoteViewModel: NoteViewModel
         }
         mNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
         mNoteViewModel.readAllData.observe(viewLifecycleOwner, Observer { it?.let{
-            myAdapter.data =it
+            myAdapter.submitList(it)
         }
         })
         binding.setLifecycleOwner (this)

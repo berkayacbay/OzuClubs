@@ -26,10 +26,12 @@ class addNoteFragment : Fragment() {
 
         myNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
 
-        val title = binding.edittextTitle.text.toString()
-        val desc =binding.edittextDesc.text.toString()
-        val time =binding.editextTime.text.toString()
+
+
         binding.buttonAddnote.setOnClickListener {
+            val title = binding.edittextTitle.text.toString()
+            val desc =binding.edittextDesc.text.toString()
+            val time =binding.editextTime.text.toString()
           insertDatatoDatabase(title,desc,time)
 
          }
@@ -38,7 +40,6 @@ class addNoteFragment : Fragment() {
     }
 
     private fun insertDatatoDatabase(title: String, desc: String, time: String) {
-        val title2 =
          if(inputCheck(title,desc,time)){
              val note = Note(0,title,desc,time)
              myNoteViewModel.addNote(note)
