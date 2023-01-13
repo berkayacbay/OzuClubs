@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "594143849970",
+    "project_id": "ozu-clubs",
+    "storage_bucket": "ozu-clubs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594143849970:android:b93eab13c90721015f8f6b",
+        "android_client_info": {
+          "package_name": "com.example.ozuclubs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594143849970-i9nqe7gohuljnj80e8jij2adf5ebr8pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmYs5nHxy5lJlDpr7t_j9vzfTu-hIIZdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594143849970-i9nqe7gohuljnj80e8jij2adf5ebr8pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
