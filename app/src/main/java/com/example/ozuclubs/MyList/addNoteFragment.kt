@@ -10,9 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.ozuclubs.MyList.Database.Note
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.FragmentAddNoteBinding
-import com.example.ozuclubs.databinding.FragmentMylistBinding
 
 class addNoteFragment : Fragment() {
     private lateinit var myNoteViewModel: NoteViewModel

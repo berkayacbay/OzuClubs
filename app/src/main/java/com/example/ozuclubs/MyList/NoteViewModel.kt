@@ -4,12 +4,15 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.ozuclubs.MyList.Database.Note
+import com.example.ozuclubs.MyList.Database.NoteDatabase
+import com.example.ozuclubs.MyList.Database.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class NoteViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Note>>
+    val readAllData: LiveData<List<Note>>
     private val repository: NoteRepository
 
     init {

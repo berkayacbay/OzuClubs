@@ -1,4 +1,4 @@
-package com.example.ozuclubs.MyList
+package com.example.ozuclubs.MyList.Database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
