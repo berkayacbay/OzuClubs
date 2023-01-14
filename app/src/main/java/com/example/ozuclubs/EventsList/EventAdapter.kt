@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 
-class EventAdapter(private val eventList: ArrayList<Event>) :
+class EventAdapter(
+    private val context: EventsFragment,
+    private val eventList: List<Event>) :
     RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,8 +28,8 @@ class EventAdapter(private val eventList: ArrayList<Event>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = eventList[position]
         holder.eventImage.setImageResource(currentItem.eventImage)
-        holder.eventHeader.text = currentItem.eventHeader
-        holder.eventBriefDesc.text = currentItem.eventBriefDesc
+        holder.eventHeader.text = context.resources.getString(currentItem.eventHeader)
+        holder.eventBriefDesc.text = context.resources.getString(currentItem.eventBriefDesc)
 
     }
 
