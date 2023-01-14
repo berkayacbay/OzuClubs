@@ -8,13 +8,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 
-class ClubAdapter(private val clubsList: ArrayList<Club>) :
+class ClubAdapter(
+    private val context: ClubsFragment,
+    private val clubsList: List<Club>) :
     RecyclerView.Adapter<ClubAdapter.MyViewHolder>() {
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val clubImage: ImageView = itemView.findViewById(R.id.club_image)
+    class MyViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
         val clubName: TextView = itemView.findViewById(R.id.club_name)
-       
+        val clubImage: ImageView = itemView.findViewById(R.id.club_image)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -25,9 +27,8 @@ class ClubAdapter(private val clubsList: ArrayList<Club>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = clubsList[position]
+        holder.clubName.text= context.resources.getString(currentItem.clubName)
         holder.clubImage.setImageResource(currentItem.clubImage)
-        holder.clubName.text = currentItem.clubName
-
     }
 
     override fun getItemCount(): Int {

@@ -1,5 +1,10 @@
 package com.example.ozuclubs.ClubsList
 
-data class Club(var clubName: String, var clubImage: Int) : java.io.Serializable {
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
+data class Club(
+   @StringRes var clubName: Int,
+   @DrawableRes var clubImage: Int) : java.io.Serializable {
 
 }
