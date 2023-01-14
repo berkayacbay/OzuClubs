@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/nav_clubs"
+    android:icon="@drawable/ic_baseline"
+    android:title="Clubs" />
+    <item
+        android:id="@+id/nav_events"
+        android:icon="@drawable/ic_baseline_calendar_view"
+        android:title="Events" />
+    <item
+        android:id="@+id/nav_notes"
+        android:icon="@drawable/ic_baseline_edit_note"
+        android:title="Notes" />
+</menu>

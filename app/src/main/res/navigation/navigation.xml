@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_ClubsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_ClubsFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventsFragment"
@@ -54,6 +57,9 @@
         <action
             android:id="@+id/action_myListFragment_to_addNoteFragment"
             app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_myListFragment_to_ClubsFragment"
+            app:destination="@id/ClubsFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

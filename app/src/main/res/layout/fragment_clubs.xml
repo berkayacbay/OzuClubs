@@ -12,11 +12,12 @@
         android:layout_height="match_parent"
         android:background="@drawable/constaintlayout">
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view1"
-            android:layout_width="412dp"
-            android:layout_height="646dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,24 +25,19 @@
             app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/list_club" />
 
-        <Button
-            android:id="@+id/button_event"
-            android:layout_width="wrap_content"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/events"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_view1"
-            app:layout_constraintVertical_bias="0.702" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/menu"
+            android:background="@color/darkerStartColor"
+            app:itemIconTint="@color/cardColor"
+            app:itemTextColor="@color/cardColor" />
 
-        <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
-        <!--            android:id="@+id/bottom_navigation"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            tools:layout_editor_absoluteX="16dp"-->
-        <!--            tools:layout_editor_absoluteY="672dp" />-->
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,18 @@ private lateinit var  mNoteViewModel: NoteViewModel
             view.findNavController().navigate(R.id.action_myListFragment_to_addNoteFragment)
 
         }
+        binding.bottomNavigation.setOnItemReselectedListener {
+            when (it.itemId) {
+                R.id.nav_clubs -> {
+                    view?.findNavController()?.navigate(R.id.action_myListFragment_to_ClubsFragment)
+
+                }
+                R.id.nav_events -> {
+                    view?.findNavController()?.navigate(R.id.action_myListFragment_to_eventsFragment)
+
+                }
+            }
+        }
 
         return binding.root
     }

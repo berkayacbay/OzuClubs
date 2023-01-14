@@ -8,12 +8,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ozuclubs.EventsList.Event
+import com.example.ozuclubs.EventsList.EventsFragment
+import com.example.ozuclubs.MyNotesList.MyNotesListFragment
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.FragmentClubsBinding
 
 class ClubsFragment : Fragment() {
-
-
 
     private lateinit var clubsArrayList: ArrayList<Club>
     private lateinit var adapter1: ClubAdapter
@@ -35,15 +36,26 @@ class ClubsFragment : Fragment() {
 
 
         }
-        binding.buttonEvent.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_clubsFragment_to_eventsFragment)
+
+
+        binding.bottomNavigation.setOnItemReselectedListener {
+            when (it.itemId) {
+                R.id.nav_events -> {
+                    view?.findNavController()?.navigate(R.id.action_clubsFragment_to_eventsFragment)
+
+                }
+                R.id.nav_notes -> {
+                    view?.findNavController()?.navigate(R.id.action_ClubsFragment_to_myListFragment)
+
+                }
+            }
         }
 
-//        binding.buttonBack2.setOnClickListener { view: View ->
-//            view.findNavController().navigate(R.id.action_ClubsFragment_to_mainFragment)
-//        }
+
         return binding.root
     }
+
+
 
 
 
