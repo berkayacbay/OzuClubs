@@ -1,4 +1,4 @@
-package com.example.ozuclubs.MyList.Database
+package com.example.ozuclubs.MyNotesList.Database
 
 import android.content.Context
 import androidx.room.Database

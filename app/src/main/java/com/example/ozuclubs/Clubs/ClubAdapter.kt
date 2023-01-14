@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.data.Club
 
 class ClubAdapter(private val clubsList: ArrayList<Club>) :
     RecyclerView.Adapter<ClubAdapter.MyViewHolder>() {

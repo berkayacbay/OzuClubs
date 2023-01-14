@@ -1,4 +1,4 @@
-package com.example.ozuclubs.adapter
+package com.example.ozuclubs.Events
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
-import com.example.ozuclubs.data.Event
 
 class EventAdapter(private val eventList: ArrayList<Event>) :
     RecyclerView.Adapter<EventAdapter.MyViewHolder>() {

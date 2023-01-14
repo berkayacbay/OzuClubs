@@ -1,18 +1,14 @@
-package com.example.ozuclubs.fragments
+package com.example.ozuclubs.Events
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ozuclubs.R
-import com.example.ozuclubs.adapter.EventAdapter
-import com.example.ozuclubs.data.Event
-import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.FragmentEventsBinding
 
 class EventsFragment : Fragment() {
@@ -24,8 +20,7 @@ class EventsFragment : Fragment() {
     lateinit var eventHeader: Array<String>
     lateinit var eventBriefDesc: Array<String>
 
-    lateinit var checkbox: Array<MyList>
-    private lateinit var cb: CheckBox
+
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

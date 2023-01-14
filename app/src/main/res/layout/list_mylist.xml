@@ -6,7 +6,8 @@
     <data>
         <variable
             name="note"
-            type="com.example.ozuclubs.MyList.Database.Note" />
+            type="com.example.ozuclubs.MyNotesList.Database.Note"/>
+
 
     </data>
 
@@ -26,7 +27,7 @@
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!--android:text="@{note.note_title}" -->
         <TextView
             android:id="@+id/text_desc"
             android:layout_width="wrap_content"
@@ -36,7 +37,7 @@
             android:text="Description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitle" />
-
+        <!--android:text="@{note.note_description}" -->
         <TextView
             android:id="@+id/text_time"
             android:layout_width="wrap_content"
@@ -45,6 +46,7 @@
             android:text="Time"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_desc" />
+        <!--android:text="@{note.note_time}" -->
 
         <TextView
             android:id="@+id/text_noteId"
@@ -66,6 +68,7 @@
             app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toEndOf="@+id/text_desc"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/note1" />
+             />
+        <!--app:imageNote="@{note}" -->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

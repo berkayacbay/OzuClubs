@@ -1,16 +1,14 @@
-package com.example.ozuclubs.MyList
+package com.example.ozuclubs.MyNotesList
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ozuclubs.MyList.Database.Note
+import com.example.ozuclubs.MyNotesList.Database.Note
 import com.example.ozuclubs.R
-import com.example.ozuclubs.data.MyList
 import com.example.ozuclubs.databinding.ListMylistBinding
 
 class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCallback()) {
@@ -19,20 +17,28 @@ class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCall
 //               field = value
 //               notifyDataSetChanged()
 //          }
-     class MyViewHolder(itemview: View): RecyclerView.ViewHolder(itemview){
 
-          val noteId: TextView = itemView.findViewById(R.id.text_noteId)
-          val noteTitle: TextView = itemView.findViewById(R.id.textTitle)
-          val noteDesc: TextView = itemView.findViewById(R.id.text_desc)
-          val noteTime: TextView =itemView.findViewById(R.id.text_time)
-          val imageNote: ImageView =itemView.findViewById(R.id.image_note)
+     class MyViewHolder(binding: ListMylistBinding): RecyclerView.ViewHolder(binding.root){
+
+//          val noteId: TextView = itemView.findViewById(R.id.text_noteId)
+//          val noteTitle: TextView = itemView.findViewById(R.id.textTitle)
+//          val noteDesc: TextView = itemView.findViewById(R.id.text_desc)
+//          val noteTime: TextView =itemView.findViewById(R.id.text_time)
+//          val imageNote: ImageView =itemView.findViewById(R.id.image_note)
+
+          val noteId: TextView = binding.textNoteId
+          val noteTitle: TextView = binding.textTitle
+          val noteDesc: TextView = binding.textDesc
+          val noteTime: TextView = binding.textTime
+          val imageNote: ImageView = binding.imageNote
 
           companion object {
                fun from(parent: ViewGroup): MyViewHolder {
-                    val layoutInflater = LayoutInflater.from(parent.context)
-                    val view = layoutInflater
-                         .inflate(R.layout.list_mylist, parent, false)
-                    return MyViewHolder(view)
+                   val layoutInflater = LayoutInflater.from(parent.context)
+//                    val view = layoutInflater
+//                         .inflate(R.layout.list_mylist, parent, false)
+                    val binding = ListMylistBinding.inflate(layoutInflater,parent,false)
+                    return MyViewHolder(binding)
                }
           }
 
@@ -41,6 +47,7 @@ class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCall
                noteTitle.text =note.note_title
                noteDesc.text = note.note_description
                noteTime.text = note.note_time
+
                imageNote.setImageResource(when (note.id %6 ){
                     0 -> R.drawable.note1
                     1 -> R.drawable.note2
@@ -50,6 +57,8 @@ class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCall
                     5 -> R.drawable.note6
                     else-> R.drawable.note1
                })
+
+
           }
      }
 

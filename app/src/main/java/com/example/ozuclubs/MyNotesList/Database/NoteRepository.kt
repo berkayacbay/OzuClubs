@@ -1,4 +1,4 @@
-package com.example.ozuclubs.MyList.Database
+package com.example.ozuclubs.MyNotesList.Database
 
 import androidx.lifecycle.LiveData
 

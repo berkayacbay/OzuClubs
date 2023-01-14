@@ -1,4 +1,4 @@
-package com.example.ozuclubs.MyList
+package com.example.ozuclubs.MyNotesList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,11 +10,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.FragmentMylistBinding
 
-class MyListFragment : Fragment() {
+class MyNotesListFragment : Fragment() {
 
 private lateinit var  mNoteViewModel: NoteViewModel
 
