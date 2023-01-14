@@ -1,4 +1,4 @@
-package com.example.ozuclubs.Events
+package com.example.ozuclubs.EventsList
 
 import android.view.LayoutInflater
 import android.view.View

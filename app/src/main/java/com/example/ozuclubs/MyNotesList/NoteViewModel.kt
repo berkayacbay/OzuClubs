@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.ozuclubs.MyNotesList.Database.Note
+import com.example.ozuclubs.Note
 import com.example.ozuclubs.MyNotesList.Database.NoteDatabase
 import com.example.ozuclubs.MyNotesList.Database.NoteRepository
 import kotlinx.coroutines.Dispatchers

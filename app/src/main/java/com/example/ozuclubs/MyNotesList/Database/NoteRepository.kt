@@ -1,6 +1,7 @@
 package com.example.ozuclubs.MyNotesList.Database
 
 import androidx.lifecycle.LiveData
+import com.example.ozuclubs.Note
 
 class NoteRepository(private val noteDao: NoteDao) {
 

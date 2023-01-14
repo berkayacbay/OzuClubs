@@ -6,7 +6,7 @@
     <data>
         <variable
             name="note"
-            type="com.example.ozuclubs.MyNotesList.Database.Note"/>
+            type="com.example.ozuclubs.Note"/>
 
 
     </data>
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Title"
+            android:text="@{note.note_title}"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="4dp"
-            android:text="Description"
+            android:text="@{note.note_description}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitle" />
         <!--android:text="@{note.note_description}" -->
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:text="Time"
+            android:text="@{note.note_time}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_desc" />
         <!--android:text="@{note.note_time}" -->
@@ -68,6 +68,7 @@
             app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toEndOf="@+id/text_desc"
             app:layout_constraintTop_toTopOf="parent"
+            app:imageNote="@{note}"
              />
         <!--app:imageNote="@{note}" -->
     </androidx.constraintlayout.widget.ConstraintLayout>

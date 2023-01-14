@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.ozuclubs.MyNotesList.Database.Note
+import com.example.ozuclubs.Note
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.FragmentAddNoteBinding
 

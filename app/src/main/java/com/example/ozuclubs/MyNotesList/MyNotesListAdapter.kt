@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ozuclubs.MyNotesList.Database.Note
+import com.example.ozuclubs.Note
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.ListMylistBinding
 
@@ -18,13 +18,8 @@ class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCall
 //               notifyDataSetChanged()
 //          }
 
-     class MyViewHolder(binding: ListMylistBinding): RecyclerView.ViewHolder(binding.root){
+     class MyViewHolder(val binding: ListMylistBinding): RecyclerView.ViewHolder(binding.root){
 
-//          val noteId: TextView = itemView.findViewById(R.id.text_noteId)
-//          val noteTitle: TextView = itemView.findViewById(R.id.textTitle)
-//          val noteDesc: TextView = itemView.findViewById(R.id.text_desc)
-//          val noteTime: TextView =itemView.findViewById(R.id.text_time)
-//          val imageNote: ImageView =itemView.findViewById(R.id.image_note)
 
           val noteId: TextView = binding.textNoteId
           val noteTitle: TextView = binding.textTitle
@@ -44,19 +39,22 @@ class MyListAdapter: ListAdapter<Note,MyListAdapter.MyViewHolder>(MyListDiffCall
 
           fun bind(note: Note){
                noteId.text = note.id.toString()
-               noteTitle.text =note.note_title
-               noteDesc.text = note.note_description
-               noteTime.text = note.note_time
+               binding.note = note
+//               noteTitle.text =note.note_title
+//               noteDesc.text = note.note_description
+//               noteTime.text = note.note_time
 
-               imageNote.setImageResource(when (note.id %6 ){
-                    0 -> R.drawable.note1
-                    1 -> R.drawable.note2
-                    2 -> R.drawable.note3
-                    3 -> R.drawable.note4
-                    4 -> R.drawable.note5
-                    5 -> R.drawable.note6
-                    else-> R.drawable.note1
-               })
+
+
+//               imageNote.setImageResource(when (note.id %6 ){
+//                    0 -> R.drawable.note1
+//                    1 -> R.drawable.note2
+//                    2 -> R.drawable.note3
+//                    3 -> R.drawable.note4
+//                    4 -> R.drawable.note5
+//                    5 -> R.drawable.note6
+//                    else-> R.drawable.note1
+//               })
 
 
           }

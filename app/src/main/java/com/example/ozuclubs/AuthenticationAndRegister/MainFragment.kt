@@ -1,8 +1,7 @@
-package com.example.ozuclubs.fragments
+package com.example.ozuclubs.AuthenticationAndRegister
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +13,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.ozuclubs.R
 import com.example.ozuclubs.databinding.FragmentMainBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 class MainFragment : Fragment() {
     private lateinit var auth: FirebaseAuth

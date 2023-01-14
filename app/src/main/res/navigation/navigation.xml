@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.ozuclubs.fragments.MainFragment"
+        android:name="com.example.ozuclubs.AuthenticationAndRegister.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/ClubsFragment"
-        android:name="com.example.ozuclubs.Clubs.ClubsFragment"
+        android:name="com.example.ozuclubs.ClubsList.ClubsFragment"
         android:label="ClubsFragment"
         tools:layout="@layout/fragment_clubs">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/eventsFragment"
-        android:name="com.example.ozuclubs.Events.EventsFragment"
+        android:name="com.example.ozuclubs.EventsList.EventsFragment"
         android:label="EventsFragment"
         tools:layout="@layout/fragment_events">
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.ozuclubs.fragments.RegisterFragment"
+        android:name="com.example.ozuclubs.AuthenticationAndRegister.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action

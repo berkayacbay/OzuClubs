@@ -1,4 +1,4 @@
-package com.example.ozuclubs.Clubs
+package com.example.ozuclubs.ClubsList
 
 import android.os.Bundle
 import android.view.LayoutInflater

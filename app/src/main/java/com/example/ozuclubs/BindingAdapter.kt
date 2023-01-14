@@ -2,13 +2,13 @@ package com.example.ozuclubs.MyNotesList
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.example.ozuclubs.MyNotesList.Database.Note
+import com.example.ozuclubs.Note
 import com.example.ozuclubs.R
 
 
 
 @BindingAdapter("imageNote")
-    fun ImageView.setNoteImage(item:Note){
+    fun ImageView.setNoteImage(item: Note){
         setImageResource(when (item.id %6 ){
             0 -> R.drawable.note1
             1 -> R.drawable.note2
