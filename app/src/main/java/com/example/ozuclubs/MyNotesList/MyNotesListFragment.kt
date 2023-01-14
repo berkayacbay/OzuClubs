@@ -15,26 +15,36 @@ import com.example.ozuclubs.databinding.FragmentMylistBinding
 
 class MyNotesListFragment : Fragment() {
 
-private lateinit var  mNoteViewModel: NoteViewModel
+    private lateinit var mNoteViewModel: NoteViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentMylistBinding>(inflater, R.layout.fragment_mylist, container, false)
-        val myAdapter =MyListAdapter()
+        val binding = DataBindingUtil.inflate<FragmentMylistBinding>(
+            inflater,
+            R.layout.fragment_mylist,
+            container,
+            false
+        )
+        val myAdapter = MyListAdapter()
 
-      binding.rvMynotes.apply {
-            layoutManager= LinearLayoutManager(context)
+        binding.rvMynotes.apply {
+            layoutManager = LinearLayoutManager(context)
             hasFixedSize()
-            this.adapter=myAdapter
+            this.adapter = myAdapter
         }
         mNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
-        mNoteViewModel.readAllData.observe(viewLifecycleOwner, Observer { it?.let{
-            myAdapter.submitList(it)
-        }
+        mNoteViewModel.readAllData.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                myAdapter.submitList(it)
+            }
         })
-        binding.setLifecycleOwner (this)
+        binding.setLifecycleOwner(this)
 
-        binding.floatingButtonAdd.setOnClickListener{view: View ->
+        binding.floatingButtonAdd.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_myListFragment_to_addNoteFragment)
 
         }
@@ -45,7 +55,8 @@ private lateinit var  mNoteViewModel: NoteViewModel
 
                 }
                 R.id.nav_events -> {
-                    view?.findNavController()?.navigate(R.id.action_myListFragment_to_eventsFragment)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_myListFragment_to_eventsFragment)
 
                 }
             }

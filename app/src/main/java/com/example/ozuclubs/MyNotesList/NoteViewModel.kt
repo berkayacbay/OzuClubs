@@ -17,11 +17,12 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         val noteDao = NoteDatabase.getDatabase(application).noteDao()
-        repository= NoteRepository(noteDao)
+        repository = NoteRepository(noteDao)
         readAllData = repository.readAllData
     }
-    fun addNote(note: Note){
-        viewModelScope.launch (Dispatchers.IO){
+
+    fun addNote(note: Note) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addNote(note)
         }
     }

@@ -13,6 +13,6 @@ interface NoteDao {
     suspend fun insert(note: Note)
 
     @Query("SELECT * FROM note_table ORDER BY id ASC")
-    fun readAllData():LiveData<List<Note>>
+    fun readAllData(): LiveData<List<Note>>
 
 }
