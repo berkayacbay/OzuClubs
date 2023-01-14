@@ -11,6 +11,13 @@
 
     </data>
 
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:backgroundTint="@color/cardColor">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -27,7 +34,8 @@
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!--android:text="@{note.note_title}" -->
+
+
         <TextView
             android:id="@+id/text_desc"
             android:layout_width="wrap_content"
@@ -37,7 +45,7 @@
             android:text="@{note.note_description}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitle" />
-        <!--android:text="@{note.note_description}" -->
+
         <TextView
             android:id="@+id/text_time"
             android:layout_width="wrap_content"
@@ -46,7 +54,7 @@
             android:text="@{note.note_time}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_desc" />
-        <!--android:text="@{note.note_time}" -->
+
 
         <TextView
             android:id="@+id/text_noteId"
@@ -70,6 +78,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:imageNote="@{note}"
              />
-        <!--app:imageNote="@{note}" -->
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
 </layout>
