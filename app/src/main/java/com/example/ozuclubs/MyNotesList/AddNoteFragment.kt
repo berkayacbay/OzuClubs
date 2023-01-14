@@ -20,9 +20,6 @@ class addNoteFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentAddNoteBinding>(inflater, R.layout.fragment_add_note, container, false)
 
-//        val application = requireNotNull(this.activity).application
-//        val dataSource = NoteDatabase.getDatabase(application).noteDao()
-//        val viewModelFactory =NoteViewModelFactory(dataSource,application)
 
         myNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
 

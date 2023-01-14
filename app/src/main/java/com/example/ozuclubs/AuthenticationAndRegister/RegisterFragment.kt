@@ -64,8 +64,6 @@ class RegisterFragment : Fragment() {
             )
                 .addOnCompleteListener(requireActivity()) { task ->
                     if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        //Log.d(TAG, "createUserWithEmail:success")
                         val currentUser = auth.currentUser
                         var currentUserDb =currentUser?.let {it1-> databaseReference?.child(it1.uid) }
                         currentUserDb?.child(("name&surname"))?.setValue(binding.textNameSurname.text.toString())

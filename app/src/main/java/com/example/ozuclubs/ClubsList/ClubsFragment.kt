@@ -16,8 +16,6 @@ class ClubsFragment : Fragment() {
     private lateinit var clubsArrayList: List<Club>
     private lateinit var adapter1: ClubAdapter
 
-    lateinit var imageId: Array<Int>
-    lateinit var clubName: Array<String>
 
 
 

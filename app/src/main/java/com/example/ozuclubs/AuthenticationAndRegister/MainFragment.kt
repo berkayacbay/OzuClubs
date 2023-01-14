@@ -29,22 +29,14 @@ class MainFragment : Fragment() {
             container,
             false
         )
-        //auth = Firebase.auth
 
-//        binding.buttonLogin.setOnClickListener { view: View ->
-//            view.findNavController()
-//                .navigate(R.id.action_mainFragment_to_ClubsFragment)
-//        }
 
         binding.registerButton.setOnClickListener { view: View ->
             view.findNavController()
                 .navigate(R.id.action_mainFragment_to_registerFragment)
         }
         auth = FirebaseAuth.getInstance()
-//        var currentUser = auth.currentUser
-//        if(currentUser != null){
-//
-//        }
+
         binding.buttonLogin.setOnClickListener { view: View ->
             var email = binding.email.text.toString()
             var password = binding.passwordEditText.text.toString()
@@ -59,42 +51,22 @@ class MainFragment : Fragment() {
         }
             signIn(email, password)
 
-//            auth.signInWithEmailAndPassword(email,password)
-//                .addOnCompleteListener(requireActivity()){
-//                    if (it.isSuccessful){
-//                        view.findNavController()
-//                            .navigate(R.id.action_mainFragment_to_ClubsFragment)
-//                    }else{
-//                        Toast.makeText(
-//                            context, "Login is Unsuccessful.",
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                    }
-//                }
 
         }
 
         return binding.root
     }
 
-//    public override fun onStart() {
-//        super.onStart()
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        val currentUser = auth.currentUser
-//        if (currentUser != null) {
-//            this.findNavController().navigate(R.id.action_mainFragment_to_ClubsFragment)
-//        }
-//    }
 
 
     private fun signIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
+
 
                     val user = auth.currentUser
-                    //updateUI(user)
+
                     this.findNavController().navigate(R.id.action_mainFragment_to_ClubsFragment)
 
                 } else {
